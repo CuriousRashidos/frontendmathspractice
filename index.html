@@ -4,10 +4,36 @@
     <link rel="stylesheet" href="index.css">
 
     <style>
-        .product {
+        #ShoppingCart {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        #Products {
+            margin: 1rem;
+            height: calc(var(--mainHeight) - 40%);
+        }
+        
+        #Summary {
+            height: calc(var(--mainHeight) - 60%);
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        #Summary div {
             border: 0.1rem solid black;
             font-size: 1.8rem;
+            padding: 0.5rem;
+            margin: 0.4rem;
+            background-color: lightgreen;
+        }
+        
+        .product {
             display: flex;
+            border: 0.1rem solid black;
             font-size: 1.8rem;
             padding: 0.5rem;
             margin: 0.4rem;
@@ -16,7 +42,9 @@
         
         .product div {
             width: calc(100% / 3);
+            text-align: center;
         }
+        
     </style>
 </head>
 
@@ -24,10 +52,11 @@
     <header>Shopping Cart 🛒</header>
     <main id="ShoppingCart">
         <div id="Products"></div>
+        <div id="Summary"></div>
     </main>
-    <footer>Course by Radical-Coder and You!</footer>
+    <footer>Useless footer</footer>
 
-    <script src="index.pack.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -1,10 +1,17 @@
 * {
-    margin 0;
+    margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    --headerFontSize: 2rem;
-    --headerPadding: 0.5rem;
+    --headerFontSize: 2rem;   
+    --headerPadding: 0.5rem; 
     --footerFontSize: 1rem;
     --footerPadding: 1rem;
+    --mainHeight: calc(
+        100vh 
+        - var(--headerFontSize) 
+        - (2 * var(--headerPadding))
+        - var(--footerFontSize) 
+        - (2 * var(--footerPadding))
+    );
 }
 
 html {
@@ -13,33 +20,27 @@ html {
 }
 
 body {
-    padding:0;
+    padding: 0;
 }
-
+        
 header {
-    background-color: lightblue;
+    background-color: lightgreen;
     font-size: var(--headerFontSize);
-    padding: var(--headerPAdding);
+    padding: var(--headerPadding);
     text-align: center;
 }
 
 main {
-    background-color: darkgray;
+    background-color: lightblue;
     font-size: 1.5rem;
     text-align: center;
-    height: calc(
-        100vh 
-        - var(--headerFontSize) 
-        - (2 * var(--headerPadding))
-        - var(--footerFontSize) 
-        - (2 * var(--footerPadding))
-    );
+    height: var(--mainHeight);
+    max-height: var(--mainHeight);
     overflow-y: auto;
-
 }
 
 footer {
-    background-color: black;
+    background-color: lightgreen;
     font-size: var(--footerFontSize);
     padding: var(--footerPadding);
     text-align: center;
